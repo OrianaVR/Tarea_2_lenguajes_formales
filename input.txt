@@ -1,0 +1,12 @@
+-- first case
+3
+1
+S -> Sa b
+-- second case
+2
+S -> Aa b
+A -> Ac Sd m
+-- third case
+2
+S -> Sa Ab
+A -> Ac Sc c

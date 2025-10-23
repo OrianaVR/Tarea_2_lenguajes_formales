@@ -79,23 +79,20 @@ Z -> aZ e
 Y -> cY bZcY e
        ```
 
-
----
-## **🗎 About input.txt**
+## 🗎 About input.txt
 
 A file named input.txt is included in the repository only as an example to show the expected input format and content.
 ⚠️ The program does not automatically read from this file — the user must enter the grammar manually when executing main.py.
 
-## **🧠 Algorithm Explanation**
+## 🧠 Algorithm Explanation
 **1.** The algorithm establishes a fixed order for all nonterminals, $N = \{A_1, A_2, \dots, A_k\}$, and processes them in this sequence. When nonterminal $A_i$ is processed, the algorithm ensures that all left recursion involving $A_i$ and any preceding nonterminal $A_j$ ($j < i$) is completely removed.
 
 **2.** For a nonterminal $A_i$, the code iterates through all $A_j$ where $j < i$. If a production is of the form $A_i \rightarrow A_j \gamma$, this production is replaced. The substitution involves taking all current productions of $A_j$ and substituting them back into $A_i$, resulting in new productions of the form. This step guarantees that $A_i$ will not start with any nonterminal $A_j$ that precedes it in the established order.
 
 **3.** Once the substitution is complete, $A_i$ may only have direct left recursion, meaning productions of the form $A_i \rightarrow A_i \alpha \mid \beta$. The strings $\beta$ are the non-recursive alternatives (those not starting with $A_i$), and the strings $\alpha$ are the trailing sequences of the recursive productions. To eliminate this direct recursion, a new nonterminal ($A'$, which is sequentially named $Z, Y, X, \dots$ in the code to comply with the single capital letter requirement) is introduced.
 
----
 
-## **📚 References**
+## 📚 References
 
 Aho, Alfred V. et al. (2006). Compilers: Principles, Techniques, and Tools (2nd Edition). Addison-Wesley.
 

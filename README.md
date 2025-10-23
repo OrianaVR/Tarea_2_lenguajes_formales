@@ -51,8 +51,9 @@ The implementation supports **any valid CFG**, not just the examples from the as
 **4** : The program will print the equivalent grammar without left recursion for each case, following the same format as the input. A single line break is printed between cases.
 
 ### 🧩 Example
-   ```
-   **Input:**
+
+**Input:**
+```
 3
 1
 S -> Sa b
@@ -62,10 +63,10 @@ A -> Ac Sd m
 2
 S -> Sa Ab
 A -> Ac Sc c
-       ```
+```
 
-      ```
 **Output:**
+```
 S -> bZ
 Z -> aZ e
 
@@ -77,12 +78,13 @@ S -> AbZ
 A -> cY
 Z -> aZ e
 Y -> cY bZcY e
-       ```
+```
 
 ## 🗎 About input.txt
 
 A file named input.txt is included in the repository only as an example to show the expected input format and content.
 ⚠️ The program does not automatically read from this file — the user must enter the grammar manually when executing main.py.
+
 
 ## 🧠 Algorithm Explanation
 **1.** The algorithm establishes a fixed order for all nonterminals, $N = \{A_1, A_2, \dots, A_k\}$, and processes them in this sequence. When nonterminal $A_i$ is processed, the algorithm ensures that all left recursion involving $A_i$ and any preceding nonterminal $A_j$ ($j < i$) is completely removed.

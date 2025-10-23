@@ -50,10 +50,9 @@ The implementation supports **any valid CFG**, not just the examples from the as
 
 **4** : The program will print the equivalent grammar without left recursion for each case, following the same format as the input. A single line break is printed between cases.
 
-🧩 Example
+### 🧩 Example
 
-Input:
-     ```
+**Input:**
 3
 1
 S -> Sa b
@@ -64,9 +63,8 @@ A -> Ac Sd m
 S -> Sa Ab
 A -> Ac Sc c
 
-     ```
-Output:
-   ```
+
+**Output:**
 S -> bZ
 Z -> aZ e
 
@@ -78,8 +76,6 @@ S -> AbZ
 A -> cY
 Z -> aZ e
 Y -> cY bZcY e
-
-   ```
 
 ---
 🗎 **About input.txt**

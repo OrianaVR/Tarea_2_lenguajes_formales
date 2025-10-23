@@ -81,7 +81,7 @@ Y -> cY bZcY e
 
 
 ---
-🗎 **About input.txt**
+## 🗎 About input.txt:
 
 A file named input.txt is included in the repository only as an example to show the expected input format and content.
 ⚠️ The program does not automatically read from this file — the user must enter the grammar manually when executing main.py.
@@ -95,7 +95,7 @@ A file named input.txt is included in the repository only as an example to show 
 
 ---
 
-📚**References**
+📚## References
 
 Aho, Alfred V. et al. (2006). Compilers: Principles, Techniques, and Tools (2nd Edition). Addison-Wesley.
 

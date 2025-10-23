@@ -42,9 +42,9 @@ The implementation supports *any valid CFG*, not just the examples from the assi
      - A line with a natural number `k > 0`, representing the number of nonterminals (`k = |N|`).  
      - Then `k` lines, each with a production rule in the format:  
 
-       
+       ```
        <nonterminal> -> <derivation alternatives separated by spaces>
-       
+       ```
 
    When you finish typing the grammar press enter to see the results
 
@@ -53,7 +53,7 @@ The implementation supports *any valid CFG*, not just the examples from the assi
 ### 🧩 Example
 
 **Input:**
-
+```
 3
 1
 S -> Sa b
@@ -63,10 +63,10 @@ A -> Ac Sd m
 2
 S -> Sa Ab
 A -> Ac Sc c
-
+```
 
 **Output:**
-
+```
 S -> bZ
 Z -> aZ e
 

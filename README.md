@@ -48,7 +48,7 @@ The implementation supports **any valid CFG**, not just the examples from the as
 
    When you finish typing the grammar press enter to see the results
 
-**4** : The program will print the equivalent grammar without left recursion for each case, following the same format as the input. A single line break is printed between cases.
+**5** : The program will print the equivalent grammar without left recursion for each case, following the same format as the input. A single line break is printed between cases.
 
 ### 🧩 Example
 

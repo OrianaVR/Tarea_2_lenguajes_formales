@@ -10,30 +10,30 @@
 ---
 
 ## ⚙️ System and Tools
-- *Operating System:* Windows 10  
-- *Programming Language:* Python 3.13  
-- *IDE / Editor:* Visual Studio Code  
+- **Operating System:** Windows 10  
+- **Programming Language:** Python 3.13  
+- **IDE / Editor:** Visual Studio Code  
 
 ---
 
 ## 📘 Description
-This project implements the algorithm for *eliminating left recursion* from a Context-Free Grammar (CFG), as described in Compilers: Principles, Techniques, and Tools by *Aho et al. (Section 4.3.3)*.  
+This project implements the algorithm for **eliminating left recursion** from a *Context-Free Grammar (CFG)*, as described in *Compilers: Principles, Techniques, and Tools* by **Aho et al. (Section 4.3.3)**.  
 
-For each case, the program prints an *equivalent grammar without left recursion*, following the same format as the input.
+For each case, the program prints an **equivalent grammar without left recursion**, following the same format as the input.
 
-The implementation supports *any valid CFG*, not just the examples from the assignment.
+The implementation supports **any valid CFG**, not just the examples from the assignment.
 
 ---
 
 ## 🚀 Instructions for Running the Implementation
 
-1. *Ensure a working installation of Python 3.*
+1. **Ensure a working installation of Python 3.**
 
-2. *Save the code* in a file named main.py.
+2. **Save the code** in a file named `main.py`.
 
-3. *Run from Terminal:*  
+3. **Run from Terminal:**  
    Open a terminal (or Visual Studio Code terminal) inside the project folder and execute:
-   bash
+   ```bash
    python main.py
 4. **Enter your input manually**, following this strict format:
 
@@ -87,11 +87,11 @@ A file named input.txt is included in the repository only as an example to show 
 
 
 ## 🧠 Algorithm Explanation
-*1.* The algorithm establishes a fixed order for all nonterminals, $N = \{A_1, A_2, \dots, A_k\}$, and processes them in this sequence. When nonterminal $A_i$ is processed, the algorithm ensures that all left recursion involving $A_i$ and any preceding nonterminal $A_j$ ($j < i$) is completely removed.
+**1.** The algorithm establishes a fixed order for all nonterminals, $N = \{A_1, A_2, \dots, A_k\}$, and processes them in this sequence. When nonterminal $A_i$ is processed, the algorithm ensures that all left recursion involving $A_i$ and any preceding nonterminal $A_j$ ($j < i$) is completely removed.
 
-*2.* For a nonterminal $A_i$, the code iterates through all $A_j$ where $j < i$. If a production is of the form $A_i \rightarrow A_j \gamma$, this production is replaced. The substitution involves taking all current productions of $A_j$ and substituting them back into $A_i$, resulting in new productions of the form. This step guarantees that $A_i$ will not start with any nonterminal $A_j$ that precedes it in the established order.
+**2.** For a nonterminal $A_i$, the code iterates through all $A_j$ where $j < i$. If a production is of the form $A_i \rightarrow A_j \gamma$, this production is replaced. The substitution involves taking all current productions of $A_j$ and substituting them back into $A_i$, resulting in new productions of the form. This step guarantees that $A_i$ will not start with any nonterminal $A_j$ that precedes it in the established order.
 
-*3.* Once the substitution is complete, $A_i$ may only have direct left recursion, meaning productions of the form $A_i \rightarrow A_i \alpha \mid \beta$. The strings $\beta$ are the non-recursive alternatives (those not starting with $A_i$), and the strings $\alpha$ are the trailing sequences of the recursive productions. To eliminate this direct recursion, a new nonterminal ($A'$, which is sequentially named $Z, Y, X, \dots$ in the code to comply with the single capital letter requirement) is introduced.
+**3.** Once the substitution is complete, $A_i$ may only have direct left recursion, meaning productions of the form $A_i \rightarrow A_i \alpha \mid \beta$. The strings $\beta$ are the non-recursive alternatives (those not starting with $A_i$), and the strings $\alpha$ are the trailing sequences of the recursive productions. To eliminate this direct recursion, a new nonterminal ($A'$, which is sequentially named $Z, Y, X, \dots$ in the code to comply with the single capital letter requirement) is introduced.
 
 
 ## 📚 References

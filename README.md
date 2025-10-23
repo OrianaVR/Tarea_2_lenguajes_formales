@@ -1,7 +1,7 @@
 # Context-Free Grammar - ASSIGNMENT 2
-*Course:* Formal Languages and Compilers  
+**Course:** Formal Languages and Compilers  
 
-*Class number:* 5730  
+**Class number:** 5730  
 
 ### 👩‍🎓 Students
 - Ana Sofia Angarita Barrios  
